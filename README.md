@@ -1,0 +1,5 @@
+# Chest-X-Ray-Classification-to-detect-COVID-19-using-Deep-Neural-Networks
+Millions of people have been impacted by the COVID-19 pandemic, which has resulted in severe morbidity and mortality. Chest radiography is one of the quick and accessible diagnostic techniques for detecting COVID-19. The project aims to develop a reliable method for detecting COVID-19 in patients by analyzing chest X-rays. Three Deep Learning systems based on LeNet, ResNet, and VGG-19 models are being developed for detecting COVID-19 in patients on a Chest Radiography dataset and GRADCAM will be applied to the best model to detect COVID-19-affected areas in the lungs.![image](https://user-images.githubusercontent.com/42197976/232930701-31268bbd-3f70-4629-9035-7d8594656ae0.png)
+
+Models are saved at [Fully Trained Models (OneDrive.com)]([https://github.com/kysgattu/Chest-X-Ray-Classification-to-detect-COVID-19-using-Deep-Neural-Networks/new/main?readme=1](https://studentuml-my.sharepoint.com/:f:/g/personal/kamalyeshodharshastry_gattu_student_uml_edu/EpG7-B4JXkRMvd-j4QIEOR0B7rRU_Q-eFEKVLYuWtIavdg?e=yLlY11))
+
