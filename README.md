@@ -51,7 +51,7 @@ The models are developed using a data repository named COVID-19 Radiography data
 #### LeNet-9 <a name = 'lenet'></a>
 - LeNet is a convolutional neural network (CNN) proposed by Yann LeCun [7] in 1998 and was one of the first successful applications of CNNs. LeNet-5 is a simple architecture with seven layers of which the first two layers are convolutional layers, followed by two subsampling layers, and then two fully connected layers concluding with one output layer. During the training process, the weights of the model are adjusted to minimize the difference between the predicted class and the actual class of the chest X-ray image and are updated using the stochastic gradient descent (SGD) optimization algorithm.
 
-![alt tag]([Project-Images/lenet_architecture.png](https://github.com/kysgattu/Chest-X-Ray-Classification-to-detect-COVID-19-using-Deep-Neural-Networks/blob/main/Project-Images/lenet_architecture.png))
+![alt tag](https://github.com/kysgattu/Chest-X-Ray-Classification-to-detect-COVID-19-using-Deep-Neural-Networks/blob/main/Project-Images/lenet_architecture.png)
 
 - The model is initialized to train for a maximum of 20 epochs with categorical cross entropy loss function and an early stopping call back is applied to prevent overfitting of the model. The model stopped training at the 8th epoch as shown in image below and the best model is saved.
 
