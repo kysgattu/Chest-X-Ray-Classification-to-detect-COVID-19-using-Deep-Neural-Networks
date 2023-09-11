@@ -15,6 +15,7 @@ This project aims to develop a quick and accurate diagnostic method using deep l
         - [ResNet-101](#resnet)
         - [VGG-19](#vgg)
         - [DenseNet](#densenet)
+  - [Evaluation of the models](#model_eval)
   - [GRAD-CAM Visualisation](#gradcam)
   - [Results](#results)
 - [Developers](#developers)
@@ -72,12 +73,16 @@ The models are developed using a data repository named COVID-19 Radiography data
 
 ![alt tag](https://github.com/kysgattu/Chest-X-Ray-Classification-to-detect-COVID-19-using-Deep-Neural-Networks/blob/main/Project-Images/vgg_architecture.png)
 
-We have used the transfer learning approach which uses weights from the model trained on the ImageNet dataset as the base model for training the model. This pretrained model is used without its top layer which is replaced with a custom layer consisting of a flatten layer, two fully connected layers with 1024 and 4 neurons with a softmax activation function. The resulting model as shown in picture above is created by specifying these input and output layers and compiled with categorical cross-entropy loss and Adam optimizer. The layers of the pre-trained VGG19 model are then frozen to prevent retraining and overfitting on the new dataset. The model is trained on the new dataset for 20 epochs as shown in picture below, with early stopping to prevent overfitting which stopped the training at the 6th epoch by saving the best model.
+- We have used the transfer learning approach which uses weights from the model trained on the ImageNet dataset as the base model for training the model. This pretrained model is used without its top layer which is replaced with a custom layer consisting of a flatten layer, two fully connected layers with 1024 and 4 neurons with a softmax activation function. The resulting model as shown in picture above is created by specifying these input and output layers and compiled with categorical cross-entropy loss and Adam optimizer. The layers of the pre-trained VGG19 model are then frozen to prevent retraining and overfitting on the new dataset. The model is trained on the new dataset for 20 epochs as shown in picture below, with early stopping to prevent overfitting which stopped the training at the 6th epoch by saving the best model.
 
 ![alt tag](https://github.com/kysgattu/Chest-X-Ray-Classification-to-detect-COVID-19-using-Deep-Neural-Networks/blob/main/Project-Images/vgg_training.png)
 
 #### Additional Approach - DenseNet <a name = 'densenet'></a>
 
-When trying to train the ResNet, the model initially showed overfitting during training. So, we explored and trained an alternate model using the DenseNet architecture introduced in 2017 by Gao Huang, Zhuang Liu et.al. In DenseNet, each layer receives direct input from all previous layers, allowing information to flow more efficiently throughout the network. The architecture is based on the concept of dense blocks, which are made up of multiple layers that feed into each other, and transition layers, which reduce the spatial dimensions of the feature maps between dense blocks. We used a pre-trained DenseNet169 model to create a new neural network using a pretrained model with its weights trained on the ImageNet dataset, and the top layer is removed. A new custom top layer is added to the base model with the number of neurons equal to the number of classes. The final model is compiled with the Adam optimizer and categorical cross-entropy loss function. The model is trained with early stopping as a callback function to prevent overfitting. The model is trained for 20 epochs and showed a validation accuracy of 92%.
+- When trying to train the ResNet, the model initially showed overfitting during training. So, we explored and trained an alternate model using the DenseNet architecture introduced in 2017 by Gao Huang, Zhuang Liu et.al. In DenseNet, each layer receives direct input from all previous layers, allowing information to flow more efficiently throughout the network. The architecture is based on the concept of dense blocks, which are made up of multiple layers that feed into each other, and transition layers, which reduce the spatial dimensions of the feature maps between dense blocks. We used a pre-trained DenseNet169 model to create a new neural network using a pretrained model with its weights trained on the ImageNet dataset, and the top layer is removed. A new custom top layer is added to the base model with the number of neurons equal to the number of classes. The final model is compiled with the Adam optimizer and categorical cross-entropy loss function. The model is trained with early stopping as a callback function to prevent overfitting. The model is trained for 20 epochs and showed a validation accuracy of 92%.
+
+> ### Evaluation of models <a name = 'model_eval'></a>
+
+- The test subset of the dataset created in the data preprocessing is used to evaluate the performance of the models. Each image is loaded to the model and the predicted class of each model is compared with the original label in the dataset. And the number of correctly predicted labels is used as a criterion to define the most accurate model.
 
 Models are saved at: [Fully Trained Models](https://studentuml-my.sharepoint.com/:f:/g/personal/kamalyeshodharshastry_gattu_student_uml_edu/EpG7-B4JXkRMvd-j4QIEOR0B7rRU_Q-eFEKVLYuWtIavdg?e=yLlY11)
