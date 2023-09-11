@@ -15,8 +15,8 @@ This project aims to develop a quick and accurate diagnostic method using deep l
         - [ResNet-101](#resnet)
         - [VGG-19](#vgg)
         - [DenseNet](#densenet)
-      - [GRAD-CAM Visualisation](#gradcam)
-      - [Results](#results)
+  - [GRAD-CAM Visualisation](#gradcam)
+  - [Results](#results)
 - [Developers](#developers)
 - [Links](#links)
 - [References](#references)            
@@ -44,6 +44,19 @@ The models are developed using a data repository named COVID-19 Radiography data
 
 - The dataset provided in Kaggle contains both Chest X-Ray Images and also their corresponding masks. Our implementation does not use the mask images. Hence, these images are ignored.
 - The images in the dataset are randomly divided into three different subsets – Training, Testing, and Validation sets with a ratio of 80-10-10 to help in training the model, evaluating the model, and finetuning the parameters during the training respectively. The images in the training and validation sets are subjected to Horizontal flip to accommodate the Data Augmentation. This helped in increasing the training parameters and help train the model in detecting minor variations in data. Then all the images are resized to the same shape of 224x224 size and the color of the images is fixed to a range of ‘RGB’. This helped the models get trained easier and prevent overfitting of the model. These preprocessed images are used for training the models.
+
+> ### Developing Deep Learning Models <a name = 'model_dev'></a>
+- We have trained three independent models – LeNet-5, ResNet-101, and VGG-16 using Keras-TensorFlow. These models are chosen for their well-known success with Image classification problems. One additional model is also developed to check the efficiency of DenseNet architecture on the problem.
+
+#### LeNet-9 <a name = 'lenet'></a>
+- LeNet is a convolutional neural network (CNN) proposed by Yann LeCun [7] in 1998 and was one of the first successful applications of CNNs. LeNet-5 is a simple architecture with seven layers of which the first two layers are convolutional layers, followed by two subsampling layers, and then two fully connected layers concluding with one output layer. During the training process, the weights of the model are adjusted to minimize the difference between the predicted class and the actual class of the chest X-ray image and are updated using the stochastic gradient descent (SGD) optimization algorithm.
+
+![alt tag]([Project-Images/lenet_architecture.png](https://github.com/kysgattu/Chest-X-Ray-Classification-to-detect-COVID-19-using-Deep-Neural-Networks/blob/main/Project-Images/lenet_architecture.png))
+
+- The model is initialized to train for a maximum of 20 epochs with categorical cross entropy loss function and an early stopping call back is applied to prevent overfitting of the model. The model stopped training at the 8th epoch as shown in image below and the best model is saved.
+
+![alt tag](https://github.com/kysgattu/Chest-X-Ray-Classification-to-detect-COVID-19-using-Deep-Neural-Networks/blob/main/Project-Images/lenet_training.png)
+
 
 
 Models are saved at: [Fully Trained Models](https://studentuml-my.sharepoint.com/:f:/g/personal/kamalyeshodharshastry_gattu_student_uml_edu/EpG7-B4JXkRMvd-j4QIEOR0B7rRU_Q-eFEKVLYuWtIavdg?e=yLlY11)
