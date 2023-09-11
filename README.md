@@ -109,8 +109,8 @@ From the above results, it is apparent that the ResNet-101 is the best-performin
 
 ## Developers <a name='developers'></a>
 * [Kamal Yeshodhar Shastry Gattu](https://github.com/kysgattu)
-* [Aditya S Karnam](https://github.com/iamkarnam1999)
 * [Pratheeksha N S Nath](https://github.com/pratheeksha11)
+* [Aditya S Karnam](https://github.com/iamkarnam1999)
 
 ## Links <a name='links'></a>
 
