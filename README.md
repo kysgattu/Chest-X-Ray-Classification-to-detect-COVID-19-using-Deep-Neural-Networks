@@ -85,4 +85,11 @@ The models are developed using a data repository named COVID-19 Radiography data
 
 - The test subset of the dataset created in the data preprocessing is used to evaluate the performance of the models. Each image is loaded to the model and the predicted class of each model is compared with the original label in the dataset. And the number of correctly predicted labels is used as a criterion to define the most accurate model.
 
+> ### GRAD_CAM Visualisation <a name = 'gradcam></a>
+- GradCam is a technique used to visualize what areas of an image are important for classification. These areas can provide insight into what features the model uses for classification and can help interpret the model's decision. GradCam will generate a heatmap for an image from a class using the generated model. These heatmaps will be overlaid on the original images to show what features or patterns the model has learned to distinguish between different classes.
+
+- The areas necessary for classification will point to the areas impacted by the virus in a patient's lungs, as the model's objective is to determine whether the patient has covid-19 from the x-ray. Hence, GradCam is used to visualize areas affected by COVID-19. GradCam is implemented using the best-performing model to visualize what areas of the image are important for classification. Then this heatmap overlapped on the chest X-ray image which showed affected areas in the lungs as shown in the picture below.
+
+![alt tag](https://github.com/kysgattu/Chest-X-Ray-Classification-to-detect-COVID-19-using-Deep-Neural-Networks/blob/main/Project-Images/gradcam.png)
+
 Models are saved at: [Fully Trained Models](https://studentuml-my.sharepoint.com/:f:/g/personal/kamalyeshodharshastry_gattu_student_uml_edu/EpG7-B4JXkRMvd-j4QIEOR0B7rRU_Q-eFEKVLYuWtIavdg?e=yLlY11)
