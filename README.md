@@ -76,4 +76,8 @@ We have used the transfer learning approach which uses weights from the model tr
 
 ![alt tag](https://github.com/kysgattu/Chest-X-Ray-Classification-to-detect-COVID-19-using-Deep-Neural-Networks/blob/main/Project-Images/vgg_training.png)
 
+#### Additional Approach - DenseNet <a name = 'densenet'></a>
+
+When trying to train the ResNet, the model initially showed overfitting during training. So, we explored and trained an alternate model using the DenseNet architecture introduced in 2017 by Gao Huang, Zhuang Liu et.al. In DenseNet, each layer receives direct input from all previous layers, allowing information to flow more efficiently throughout the network. The architecture is based on the concept of dense blocks, which are made up of multiple layers that feed into each other, and transition layers, which reduce the spatial dimensions of the feature maps between dense blocks. We used a pre-trained DenseNet169 model to create a new neural network using a pretrained model with its weights trained on the ImageNet dataset, and the top layer is removed. A new custom top layer is added to the base model with the number of neurons equal to the number of classes. The final model is compiled with the Adam optimizer and categorical cross-entropy loss function. The model is trained with early stopping as a callback function to prevent overfitting. The model is trained for 20 epochs and showed a validation accuracy of 92%.
+
 Models are saved at: [Fully Trained Models](https://studentuml-my.sharepoint.com/:f:/g/personal/kamalyeshodharshastry_gattu_student_uml_edu/EpG7-B4JXkRMvd-j4QIEOR0B7rRU_Q-eFEKVLYuWtIavdg?e=yLlY11)
