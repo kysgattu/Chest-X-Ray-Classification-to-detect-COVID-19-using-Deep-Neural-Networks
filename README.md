@@ -49,7 +49,7 @@ The models are developed using a data repository named COVID-19 Radiography data
 > ### Developing Deep Learning Models <a name = 'model_dev'></a>
 - We have trained three independent models – LeNet-5, ResNet-101, and VGG-16 using Keras-TensorFlow. These models are chosen for their well-known success with Image classification problems. One additional model is also developed to check the efficiency of DenseNet architecture on the problem.
 
-#### LeNet-9 <a name = 'lenet'></a>
+#### LeNet-5 <a name = 'lenet'></a>
 - LeNet is a convolutional neural network (CNN) proposed by Yann LeCun in 1998 and was one of the first successful applications of CNNs. LeNet-5 is a simple architecture with seven layers. The first two are convolutional layers, followed by two subsampling layers, and then two fully connected layers concluding with one output layer. During the training process, the weights of the model are adjusted to minimize the difference between the predicted class and the actual class of the chest X-ray image and are updated using the stochastic gradient descent (SGD) optimization algorithm.
 
 ![alt tag](https://github.com/kysgattu/Chest-X-Ray-Classification-to-detect-COVID-19-using-Deep-Neural-Networks/blob/main/Project-Images/lenet_architecture.png)
