@@ -57,6 +57,13 @@ The models are developed using a data repository named COVID-19 Radiography data
 
 ![alt tag](https://github.com/kysgattu/Chest-X-Ray-Classification-to-detect-COVID-19-using-Deep-Neural-Networks/blob/main/Project-Images/lenet_training.png)
 
+#### ResNet-101 <a name = 'resnet'></a>
+- The ResNet model proposed in 2015 by Kaiming He et al. [8] is a deep and complex CNN architecture with residual connections that allows for the training of very deep networks. ResNet is made up of several residual blocks, each with two or three convolutional layers and a shortcut connection that bypasses them. The shortcut connection allows the input to be added to the residual block's output, thereby avoiding the vanishing gradient problem, and allowing the model to learn identity mappings.
 
+![alt tag](https://github.com/kysgattu/Chest-X-Ray-Classification-to-detect-COVID-19-using-Deep-Neural-Networks/blob/main/Project-Images/resnet_residual_blocks.png)
+
+- We have used a variation of ResNet that is 101 layers deep including convolutional layers, batch normalization layers, and shortcut connections. The model is based on the Residual Network (ResNet) architecture, which was introduced in 2015. The Model we used is pre-trained on the ImageNet dataset consisting of one million images of 1000 categories which means it already knows how to detect important features in an image. We have added two new fully connected layers to the model using the Keras functional API. The first layer consists of 256 neurons with a ReLU activation function, followed by a final output layer with a softmax activation function those outputs probabilities for each of the categories. After adding the new layers, the pre-trained layers of the ResNet101 model are frozen, meaning that their weights will not be updated during training to prevent overfitting and to preserve the features that the pre-trained model has learned. The model is then compiled and trained with early stopping call back on validation loss, categorical crossentropy loss function, and Adam as the optimizer. The model is defined to be trained for a maximum of 20 epochs and the model stopped training at the 12th epoch as shown in Fig.3 and the best model is saved for further usage.
+
+![alt tag](https://github.com/kysgattu/Chest-X-Ray-Classification-to-detect-COVID-19-using-Deep-Neural-Networks/blob/main/Project-Images/resnet_training.png)
 
 Models are saved at: [Fully Trained Models](https://studentuml-my.sharepoint.com/:f:/g/personal/kamalyeshodharshastry_gattu_student_uml_edu/EpG7-B4JXkRMvd-j4QIEOR0B7rRU_Q-eFEKVLYuWtIavdg?e=yLlY11)
