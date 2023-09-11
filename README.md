@@ -118,9 +118,10 @@ GitHub:     [G K Y SHASTRY](https://github.com/kysgattu)
 
 Contact me:     <gkyshastry0502@gmail.com> , <kysgattu0502@gmail.com>
 
+Models are saved at [Fully Trained Models](https://studentuml-my.sharepoint.com/:f:/g/personal/kamalyeshodharshastry_gattu_student_uml_edu/EpG7-B4JXkRMvd-j4QIEOR0B7rRU_Q-eFEKVLYuWtIavdg?e=yLlY11)
+
 ## References <a name='references'></a>
 
 [COVID-19 Radiography Database](https://www.kaggle.com/datasets/tawsifurrahman/covid19-radiography-database)
 
 
-Models are saved at [Fully Trained Models](https://studentuml-my.sharepoint.com/:f:/g/personal/kamalyeshodharshastry_gattu_student_uml_edu/EpG7-B4JXkRMvd-j4QIEOR0B7rRU_Q-eFEKVLYuWtIavdg?e=yLlY11)
