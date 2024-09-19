@@ -33,6 +33,11 @@ This project aims to develop a quick and accurate diagnostic method using deep l
 OR
 - Any Python3 IDE installed with the above modules. (Pycharm is used in the development of this project)
 
+AND
+
+A environment should have access to very good resources - good GPU, RAM etc required for any deep learning project.
+- To give a rough idea, this project is built on a Macbook Pro 2021 with an M1 Chip 
+
 ### Dataset Description <a name='dataset-description'></a>
 
 The models are developed using a data repository named COVID-19 Radiography dataset from Kaggle which is compiled by a team of researchers from Qatar University, Doha, Qatar, and the University of Dhaka, Bangladesh along with their collaborators from Pakistan and Malaysia. The dataset consists of chest X-ray images for three pneumonia-related chest illnesses along with normal health. The dataset contains more than 42000 images divided into two folders one containing chest X-ray images and the other containing their corresponding masks. For this project, we used only the Chest X-ray images which contain 3616 COVID-19-positive cases along with 10,192 Normal, 6012 Lung Opacity (Non-COVID lung infection), and 1345 Viral Pneumonia images.
@@ -118,7 +123,7 @@ GitHub:     [G K Y SHASTRY](https://github.com/kysgattu)
 
 Contact me:     <gkyshastry0502@gmail.com> , <kysgattu0502@gmail.com>
 
-Models are saved at [Fully Trained Models](https://studentuml-my.sharepoint.com/:f:/g/personal/kamalyeshodharshastry_gattu_student_uml_edu/EpG7-B4JXkRMvd-j4QIEOR0B7rRU_Q-eFEKVLYuWtIavdg?e=yLlY11)
+Models are saved at [Fully Trained Models](https://drive.google.com/drive/folders/133CibCZjYAhnrDWB0KuoinOZG6Fm7O2X?usp=sharing)
 
 ## References <a name='references'></a>
 
